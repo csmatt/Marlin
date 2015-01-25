@@ -36,7 +36,7 @@
 #define SERIAL_PORT 0
 
 // This determines the communication speed of the printer
-#define BAUDRATE 115200
+#define BAUDRATE 115200 // necessary for Linux
 
 // This enables the serial port associated to the Bluetooth interface
 //#define BTENABLED              // Enable BT interface on AT90USB devices
@@ -44,7 +44,7 @@
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-#define MOTHERBOARD 33
+#define MOTHERBOARD 33 // makerfarm
 #endif
 
 // Define this to set a custom name for your generic Mendel,
@@ -482,7 +482,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // makerfarm - set to true to invert
 // default settings
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4000,841} // makerfarm // default steps per unit for Ultimaker
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 25}    // (mm/sec)
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 2, 25}    // makerfarm (Z value > 2 causes problems (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
