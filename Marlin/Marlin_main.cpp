@@ -1244,6 +1244,7 @@ static void homeaxis(int axis) {
     feedrate = 0.0;
     endstops_hit_on_purpose();
     axis_known_position[axis] = true;
+    plan_set_position(current_position[X_AXIS], current_position[Y_AXIS], current_position[Z_AXIS], current_position[E_AXIS]); // custom
 
     // Retract Servo endstop if enabled
     #ifdef SERVO_ENDSTOPS

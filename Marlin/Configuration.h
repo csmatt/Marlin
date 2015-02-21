@@ -374,13 +374,13 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // makerfarm - set to true to invert
 
     // set the rectangle in which to probe
     #define LEFT_PROBE_BED_POSITION 15
-    #define RIGHT_PROBE_BED_POSITION 170
-    #define BACK_PROBE_BED_POSITION 180
+    #define RIGHT_PROBE_BED_POSITION 195
+    #define BACK_PROBE_BED_POSITION 195
     #define FRONT_PROBE_BED_POSITION 20
 
      // set the number of grid points per dimension
      // I wouldn't see a reason to go above 3 (=9 probing points on the bed)
-    #define AUTO_BED_LEVELING_GRID_POINTS 2
+    #define AUTO_BED_LEVELING_GRID_POINTS 3
 
 
   #else  // not AUTO_BED_LEVELING_GRID
@@ -403,7 +403,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // makerfarm - set to true to invert
   #define Y_PROBE_OFFSET_FROM_EXTRUDER 8     // custom for my printer
   #define Z_PROBE_OFFSET_FROM_EXTRUDER -9.70 // custom for my printer
 
-  #define Z_RAISE_BEFORE_HOMING 4       // (in mm) Raise Z before homing (G28) for Probe Clearance.
+  #define Z_RAISE_BEFORE_HOMING 10      // custom for my printer (must be higher than Z_PROBE_OFFSET_FROM_EXTRUDER) // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
 
   #define XY_TRAVEL_SPEED 8000         // X and Y axis travel speed between probes, in mm/min
